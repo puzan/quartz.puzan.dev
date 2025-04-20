@@ -25,6 +25,7 @@ import {
 } from "./helpers.js"
 import {
   UPSTREAM_NAME,
+  QUARTZ_CONTENT_BRANCH,
   QUARTZ_SOURCE_BRANCH,
   ORIGIN_NAME,
   version,
@@ -578,7 +579,7 @@ export async function handleSync(argv) {
       "Pulling updates from your repository. You may need to resolve some `git` conflicts if you've made changes to components or plugins.",
     )
     try {
-      gitPull(ORIGIN_NAME, QUARTZ_SOURCE_BRANCH)
+      gitPull(ORIGIN_NAME, QUARTZ_CONTENT_BRANCH)
     } catch {
       console.log(chalk.red("An error occurred above while pulling updates."))
       await popContentFolder(contentFolder)
@@ -589,7 +590,7 @@ export async function handleSync(argv) {
   await popContentFolder(contentFolder)
   if (argv.push) {
     console.log("Pushing your changes")
-    const res = spawnSync("git", ["push", "-uf", ORIGIN_NAME, QUARTZ_SOURCE_BRANCH], {
+    const res = spawnSync("git", ["push", "-uf", ORIGIN_NAME, QUARTZ_CONTENT_BRANCH], {
       stdio: "inherit",
     })
     if (res.status !== 0) {
