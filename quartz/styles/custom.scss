@@ -1,3 +1,18 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+@font-face {
+    font-family: "excalifont";
+    src: url("static/font/Excalifont-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+pre.poetry {
+    font-size: 1.2rem;
+    font-family: excalifont;
+    border: none;
+    padding: 0;
+    position: unset;
+}
