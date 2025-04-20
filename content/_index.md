@@ -2,10 +2,8 @@
 tags: 
 title: puzan.dev
 created: 2025-04-10T22:29:20+03:00
-modified: 2025-04-20T21:15:28+03:00
+modified: 2025-04-20T22:10:33+03:00
 ---
-
-![[about.jpeg|Скай и я]]
 
 ```poetry
 Привет!
