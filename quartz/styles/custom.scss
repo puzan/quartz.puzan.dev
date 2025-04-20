@@ -16,3 +16,80 @@ pre.poetry {
     padding: 0;
     position: unset;
 }
+
+blockquote {
+    border-color: var(--dark);
+
+    p {
+        color: var(--textHighlight);
+    }
+}
+
+.text-highlight {
+    color: var(--fontHighlight);
+}
+
+a {
+    &.internal {
+        color: var(--highlight);
+        background-color: unset;
+
+        &:hover {
+            color: var(--highlight) !important;
+        }
+    }
+
+    &.external {
+        color: var(--externalLink);
+
+        &:hover {
+            color: var(--externalLink) !important;
+        }
+    }
+
+    &:hover {
+        text-decoration-line: underline;
+    }
+}
+
+.explorer-content {
+    ul li>a {
+        opacity: unset;
+    }
+
+    a {
+        color: var(--gray) !important;
+    }
+
+    li:has(> a.active),
+    div:has(> div > a.active) {
+        background-color: var(--activeMenu);
+    }
+
+    li:has(> a):hover,
+    div:has(> div > a):hover {
+        background-color: var(--dark);
+    }
+
+    li > a.active,
+    li:hover > a,
+    div:hover > div > a,
+    div > div > a.active {
+        color: var(--fontHighlight) !important;
+        text-decoration-line: none;
+    }
+
+    li:has(> a) {
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+
+    div:has(> div > a) {
+        border-radius: 4px;
+        padding-left: 5px;
+    }
+
+    div:has(> div > a.active) svg.folder-icon {
+        color: var(--fontHighlight);
+    }
+}

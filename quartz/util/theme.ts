@@ -8,6 +8,9 @@ export interface ColorScheme {
   tertiary: string
   highlight: string
   textHighlight: string
+  fontHighlight: string
+  externalLink: string
+  activeMenu: string
 }
 
 interface Colors {
@@ -145,6 +148,9 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
+  --fontHighlight: ${theme.colors.lightMode.fontHighlight};
+  --externalLink: ${theme.colors.lightMode.externalLink};
+  --activeMenu: ${theme.colors.lightMode.activeMenu};
 
   --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
@@ -162,6 +168,9 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
+  --fontHighlight: ${theme.colors.darkMode.fontHighlight};
+  --externalLink: ${theme.colors.darkMode.externalLink};
+  --activeMenu: ${theme.colors.darkMode.activeMenu};
 }
 `
 }
