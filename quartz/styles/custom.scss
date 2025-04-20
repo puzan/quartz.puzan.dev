@@ -93,7 +93,8 @@ a {
         padding-left: 5px;
     }
 
-    div:has(> div > a.active) svg.folder-icon {
+    div:has(> div > a.active) svg.folder-icon,
+    div:has(> div > a):hover svg.folder-icon {
         color: var(--fontHighlight);
     }
 }
