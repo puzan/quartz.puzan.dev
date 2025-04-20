@@ -3,98 +3,105 @@
 // put your custom CSS here!
 
 @font-face {
-    font-family: "excalifont";
-    src: url("static/font/Excalifont-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "excalifont";
+  src: url("static/font/Excalifont-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 pre.poetry {
-    font-size: 1.2rem;
-    font-family: excalifont;
-    border: none;
-    padding: 0;
-    position: unset;
+  font-size: 1.2rem;
+  font-family: excalifont;
+  border: none;
+  padding: 0;
+  position: unset;
 }
 
-.meta, .content-meta {
-    font-family: excalifont, var(--bodyFont);
+.meta,
+.content-meta {
+  font-family: excalifont, var(--bodyFont);
 }
 
 blockquote {
-    border-color: var(--dark);
+  border-color: var(--dark);
 
-    p {
-        color: var(--textHighlight);
-    }
+  p {
+    color: var(--textHighlight);
+  }
 }
 
 .text-highlight {
-    color: var(--fontHighlight);
+  color: var(--fontHighlight);
 }
 
 a {
-    &.internal {
-        color: var(--highlight);
-        background-color: unset;
-
-        &:hover {
-            color: var(--highlight) !important;
-        }
-    }
-
-    &.external {
-        color: var(--externalLink);
-
-        &:hover {
-            color: var(--externalLink) !important;
-        }
-    }
+  &.internal {
+    color: var(--highlight);
+    background-color: unset;
 
     &:hover {
-        text-decoration-line: underline;
+      color: var(--highlight) !important;
     }
+  }
+
+  &.external {
+    color: var(--externalLink);
+
+    &:hover {
+      color: var(--externalLink) !important;
+    }
+  }
+
+  &:hover {
+    text-decoration-line: underline;
+  }
 }
 
 .explorer-content {
-    ul li>a {
-        opacity: unset;
-    }
+  ul li > a {
+    opacity: unset;
+  }
 
-    a {
-        color: var(--gray) !important;
-    }
+  a {
+    color: var(--gray) !important;
+  }
 
-    li:has(> a.active),
-    div:has(> div > a.active) {
-        background-color: var(--activeMenu);
-    }
+  li:has(> a.active),
+  div:has(> div > a.active) {
+    background-color: var(--activeMenu);
+  }
 
-    li:has(> a):hover,
-    div:has(> div > a):hover {
-        background-color: var(--dark);
-    }
+  li:has(> a):hover,
+  div:has(> div > a):hover {
+    background-color: var(--dark);
+  }
 
-    li > a.active,
-    li:hover > a,
-    div:hover > div > a,
-    div > div > a.active {
-        color: var(--fontHighlight) !important;
-        text-decoration-line: none;
-    }
+  li > a.active,
+  li:hover > a,
+  div:hover > div > a,
+  div > div > a.active {
+    color: var(--fontHighlight) !important;
+    text-decoration-line: none;
+  }
 
-    li:has(> a) {
-        border-radius: 4px;
-        padding-left: 10px;
-    }
+  li:has(> a) {
+    border-radius: 4px;
+    padding-left: 10px;
+  }
 
-    div:has(> div > a) {
-        border-radius: 4px;
-        padding-left: 5px;
-    }
+  div:has(> div > a) {
+    border-radius: 4px;
+    padding-left: 5px;
+  }
 
-    div:has(> div > a.active) svg.folder-icon,
-    div:has(> div > a):hover svg.folder-icon {
-        color: var(--fontHighlight);
-    }
+  div:has(> div > a.active) svg.folder-icon,
+  div:has(> div > a):hover svg.folder-icon {
+    color: var(--fontHighlight);
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar.left {
+    flex-wrap: wrap;
+  }
 }
