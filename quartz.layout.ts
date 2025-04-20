@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { baseUrl } from "./config"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -11,6 +12,7 @@ export const sharedPageComponents: SharedLayout = {
       GitHub: "https://github.com/puzan",
       Telegram: "https://t.me/izonov",
       ПузоТерка: "https://t.me/ArchPuzoTerka",
+      RSS: `https://${baseUrl}/index.xml`,
     },
   }),
 }
