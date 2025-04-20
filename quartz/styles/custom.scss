@@ -17,6 +17,10 @@ pre.poetry {
     position: unset;
 }
 
+.meta, .content-meta {
+    font-family: excalifont, var(--bodyFont);
+}
+
 blockquote {
     border-color: var(--dark);
 
