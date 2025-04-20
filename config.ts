@@ -1,1 +1,1 @@
-export const baseUrl = "puzan.dev"
+export const baseUrl = "quartz.puzan.dev"
