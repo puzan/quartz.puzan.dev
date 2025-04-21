@@ -103,5 +103,6 @@ a {
 @media (max-width: 800px) {
   .sidebar.left {
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
