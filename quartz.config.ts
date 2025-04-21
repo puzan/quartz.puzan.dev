@@ -9,7 +9,7 @@ import { baseUrl } from "./config"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🏡 Пузатый Сад",
+    pageTitle: "Пузатый Сад",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: false,
