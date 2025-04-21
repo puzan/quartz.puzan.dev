@@ -9,7 +9,7 @@ import { baseUrl } from "./config"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🏡 Цифровой Пузатый Сад",
+    pageTitle: "🏡 Пузатый Сад",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: false,
@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
         header: "JetBrains Mono",
