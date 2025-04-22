@@ -42,6 +42,10 @@ a {
     &:hover {
       color: var(--highlight) !important;
     }
+
+    &.tag-link {
+      background-color: unset;
+    }
   }
 
   &.external {
