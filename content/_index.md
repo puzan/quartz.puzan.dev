@@ -2,7 +2,7 @@
 tags: 
 title: puzan.dev
 created: 2025-04-10T22:29:20+03:00
-modified: 2025-04-22T21:56:29+03:00
+modified: 2025-04-22T23:13:31+03:00
 ---
 
 ```poetry

@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl,
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "_vault"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "local",
