@@ -13,7 +13,10 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: false,
-    analytics: null,
+    analytics: {
+      provider: "yandex",
+      counterId: "101372029",
+    },
     locale: "en-US",
     baseUrl,
     ignorePatterns: ["private", "templates", ".obsidian", "_vault"],

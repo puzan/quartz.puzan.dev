@@ -103,7 +103,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
           gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
         });
       };
-      
+
       document.head.appendChild(gtagScript);
     `)
   } else if (cfg.analytics?.provider === "plausible") {
@@ -168,7 +168,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       })\`
       posthogScript.onload = () => {
         posthog.capture('$pageview', { path: location.pathname });
-      
+
         document.addEventListener('nav', () => {
           posthog.capture('$pageview', { path: location.pathname });
         });
@@ -188,7 +188,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
           window.tinylytics.triggerUpdate();
         });
       };
-      
+
       document.head.appendChild(tinylyticsScript);
     `)
   } else if (cfg.analytics?.provider === "cabin") {
@@ -206,6 +206,28 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "${cfg.analytics.projectId}");\`
       document.head.appendChild(clarityScript)
+    `)
+  } else if (cfg.analytics?.provider === "yandex") {
+    componentResources.afterDOMLoaded.push(`
+      const yandexScript = document.createElement("script")
+      yandexScript.innerHTML= \`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(${cfg.analytics.counterId}, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+      });\`
+
+      const yandexNoScript = document.createElement("noscript")
+      yandexNoScript.innerHTML = \`<div><img src="https://mc.yandex.ru/watch/${cfg.analytics.counterId}" style="position:absolute; left:-9999px;" alt="" /></div>\`
+
+      document.head.appendChild(yandexNoScript)
+      document.head.appendChild(yandexScript)
     `)
   }
 
