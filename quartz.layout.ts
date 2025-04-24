@@ -17,7 +17,7 @@ export const sharedPageComponents: SharedLayout = {
         categoryId: 'DIC_kwDOOckvt84Cpbmp',
         darkTheme: 'catppuccin_frappe',
         lightTheme: 'catppuccin_latte',
-        themeUrl: 'https://giscus.app/themes/',
+        themeUrl: 'https://giscus.app/themes',
       }
     }),
   ],
