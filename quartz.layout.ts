@@ -6,7 +6,21 @@ import { baseUrl } from "./config"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.Graph()],
+  afterBody: [
+    Component.Graph(),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        repo: 'puzan/quartz.puzan.dev',
+        repoId: 'R_kgDOOckvtw',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOOckvt84Cpbmp',
+        darkTheme: 'catppuccin_frappe',
+        lightTheme: 'catppuccin_latte',
+        themeUrl: 'https://giscus.app/themes/',
+      }
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/puzan",
