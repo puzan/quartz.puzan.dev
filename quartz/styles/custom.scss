@@ -9,6 +9,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("static/font/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2"),
+       url("static/font/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2"),
+       url("static/font/jetbrains-mono/JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 pre.poetry {
   font-size: 1.2rem;
   font-family: excalifont;
@@ -113,4 +122,8 @@ a {
 
 li.section-li>.section .meta {
   width: 120px;
+}
+
+body {
+  font-family: "JetBrains Mono", var(--bodyFont);
 }
