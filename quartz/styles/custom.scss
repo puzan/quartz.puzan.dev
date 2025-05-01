@@ -99,7 +99,10 @@ a {
 
   li:has(> a) {
     border-radius: 4px;
-    padding-left: 10px;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: visible;
+    display: block;
   }
 
   div:has(> div > a) {
@@ -110,6 +113,11 @@ a {
   div:has(> div > a.active) svg.folder-icon,
   div:has(> div > a):hover svg.folder-icon {
     color: var(--fontHighlight);
+  }
+
+  li:has(> a)::before {
+    content: '•';
+    margin-right: 4px;
   }
 }
 

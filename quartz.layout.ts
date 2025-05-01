@@ -31,6 +31,38 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+const explorer = Component.Explorer({
+  sortFn: (a, b) => {
+    // Sort folders first
+    if (a.isFolder !== b.isFolder) {
+      return a.isFolder ? -1 : 1;
+    }
+
+    // If both are folders, sort alphabetically
+    if (a.isFolder && b.isFolder) {
+      return a.displayName.localeCompare(b.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      });
+    }
+
+    // Sort by date if available for non-folders
+    if (a.data?.date && b.data?.date) {
+      const dateA = new Date(a.data.date);
+      const dateB = new Date(b.data.date);
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateB.getTime() - dateA.getTime();
+      }
+    }
+
+    // Fallback to alphabetical sorting
+    return a.displayName.localeCompare(b.displayName, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    });
+  },
+})
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -60,7 +92,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    explorer,
   ],
   right: [Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
 }
@@ -80,7 +112,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    explorer,
   ],
   right: [],
 }
