@@ -11,7 +11,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "Пузатый Сад",
     pageTitleSuffix: "",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: false,
     analytics: {
       provider: "yandex",
