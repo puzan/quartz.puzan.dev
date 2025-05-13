@@ -1,10 +1,10 @@
 ---
 aliases:
   - VirtualBox проблемы с Bridged network через Wifi на Mac
-tags: 
+tags: old.puzan.dev
 title: VirtualBox проблемы с Bridged network через Wifi на Mac
 created: 2014-05-08
-modified: 2025-05-01T10:41:16+03:00
+modified: 2025-05-13T22:50:03+03:00
 permalink: linux/2014-05-08-virtualbox-problemy-s-bridged-network-cherez-wifi-na-mac
 ---
 

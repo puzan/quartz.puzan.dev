@@ -1,10 +1,12 @@
 ---
 aliases:
   - WebDav за https proxy
-tags: self-hosted
+tags:
+  - self-hosted
+  - old.puzan.dev
 title: WebDav за https proxy
 created: 2020-06-19T22:55:22+03:00
-modified: 2025-05-01T10:44:25+03:00
+modified: 2025-05-13T22:50:15+03:00
 permalink: linux/2020-06-19-webdav-za-https-proxy
 ---
 
