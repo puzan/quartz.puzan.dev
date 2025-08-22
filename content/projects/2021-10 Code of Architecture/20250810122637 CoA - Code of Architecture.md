@@ -6,7 +6,7 @@ aliases:
 tags: 
 title: CoA - Code of Architecture
 created: 2025-08-10T12:26:37+03:00
-modified: 2025-08-21T23:19:21+03:00
+modified: 2025-08-22T20:11:14+03:00
 ---
 
 [[projects/2021-10 Code of Architecture/_index|Code of Architecture]] - книжный клуб про архитектуру, спонтанно возникший после публикации следующего твита:
@@ -31,5 +31,5 @@ modified: 2025-08-21T23:19:21+03:00
 
 - [[_index|Илья Зонов]]
 - [Владимир Иванов](https://vvsevolodovich.dev)
-- Владимир Чистяков
+- [Владимир Чистяков](https://t.me/vladimir_chistyakov)
 - [Александр Поломодов](https://t.me/book_cube)
