@@ -3,13 +3,12 @@ aliases:
   - CoA - Code of Architecture
   - Code of Architecture
   - CoA
-tags: 
 title: CoA - Code of Architecture
 created: 2025-08-10T12:26:37+03:00
-modified: 2025-08-22T20:11:14+03:00
+modified: 2025-08-23T18:31:50+03:00
 ---
 
-[[projects/2021-10 Code of Architecture/_index|Code of Architecture]] - книжный клуб про архитектуру, спонтанно возникший после публикации следующего твита:
+[[20250810122637 CoA - Code of Architecture|Code of Architecture]] - книжный клуб про архитектуру, спонтанно возникший после публикации следующего твита:
 
 <blockquote class="twitter-tweet"><p lang="ru" dir="ltr">Давай книжный клуб по кабанчику сделаем.</p>&mdash; Ilya Zonov (@puzan@mas.to) (@puzan) <a href="https://twitter.com/puzan/status/1449316310991638533?ref_src=twsrc%5Etfw">October 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
